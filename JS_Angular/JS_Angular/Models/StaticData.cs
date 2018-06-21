@@ -12,9 +12,9 @@ namespace JS_Angular.Models
         {
             List<Person> people = new List<Person>
             {
-                new Person() {Name = "Steve", Email = "Steve@mail.com", PhoneNumber = "555-6793", City = "New York", Country = "USA", Occupation = "Telephone hygienist" },
-                new Person() {Name = "Joe", Email = "Joe@mail.com", PhoneNumber = "070-3403881", City = "Stockholm", Country = "Sweden", Occupation = "Social vocalist" },
-                new Person() {Name = "Margot", Email = "BigM420@hotmail.com", PhoneNumber = "Not available", City = "London", Country = "UK", Occupation = "Mannequin" }    
+                new Person() {FirstName = "Steve", LastName = "Hendricks", Email = "Steve@mail.com", PhoneNumber = "555-6793", City = "New York", Country = "USA", Occupation = "Telephone hygienist" },
+                new Person() {FirstName = "Joe", LastName = "Average", Email = "Joe@mail.com", PhoneNumber = "070-3403881", City = "Stockholm", Country = "Sweden", Occupation = "Social vocalist" },
+                new Person() {FirstName = "Margot", LastName = "Wendigo", Email = "BigM420@hotmail.com", PhoneNumber = "Not available", City = "London", Country = "UK", Occupation = "Mannequin" }    
             };
 
             var context = new PersonDataContext();

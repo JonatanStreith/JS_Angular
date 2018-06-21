@@ -4,16 +4,67 @@
 
     var context = new PersonDataContext();
 
+    List<Person> peoplelist = context.People.ToList();
+
 }
 
 <h2>Database</h2>
 
-<div ng-app="DatabaseApp">
+<div>
+
+    {{5+5}}
+
+
     <div ng-controller="DatabaseController">
+        {{$scope.message}}
+
+
+
+
+        <div class="col-lg-8 col-md-8" id="listfield">
+
+            @{
+                foreach (Person p in peoplelist)
+                {
+                    <span class="col-lg-4 col-md-4">@p.FirstName</span>
+                    <span class="col-lg-4 col-md-4">@p.LastName</span>
+                    <span class="col-lg-2 col-md-2">@p.Country</span>
+                    <span class="col-lg-2 col-md-2">
+                        <input type="submit" value="Details" ng-click="RetrieveDetails(@p.Id)" />
+                    </span>
+
+                }
+
+
+            }
+
+
+
+
+        </div>
+
+
+
+
+
+        <div class="col-lg-4 col-md-4" id="detailsfield">
+
+            <span class="col-lg-6 col-md-6">First Name:</span><span class="col-lg-6 col-md-6" ng-bind="$scope.FirstName"></span>
+            <span class="col-lg-6 col-md-6">Last Name:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+            <span class="col-lg-6 col-md-6">E-mail:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+            <span class="col-lg-6 col-md-6">Phone number:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+            <span class="col-lg-6 col-md-6">City:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+            <span class="col-lg-6 col-md-6">Country:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+            <span class="col-lg-6 col-md-6">Occupation:</span><span class="col-lg-6 col-md-6" ng-bind=""></span>
+
+
+
+
+        </div>
+
+
 
 
 
     </div>
-
-
 </div>
