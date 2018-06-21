@@ -11,10 +11,10 @@
         };
 
 
-        $scope.RetrieveDetails = function (Id)
+        $scope.RetrieveDetails = function (Id, searchCriteria)
         {
             $scope.message = "Clicked";
-            $http.post("Home/RetrieveData", Id).then(onComplete);
+            $http.get("Home/RetrieveData/" + Id + "?" + searchCriteria).then(onComplete);
         };
 
 

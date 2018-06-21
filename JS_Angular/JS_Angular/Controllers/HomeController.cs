@@ -28,13 +28,13 @@ namespace JS_Angular.Controllers
         }
 
         //[HttpPost]
-        public JsonResult RetrieveData(string Id)
+        public JsonResult RetrieveData()
         {
 
 
-            Person pers = context.People.First(x => x.Id.ToString() == Id);
+           // Person pers = context.People.First(x => x.Id.ToString() == Id);
 
-            return Json(pers);
+            return Json("Dave");
         }
 
     }
